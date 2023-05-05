@@ -5,15 +5,12 @@ public struct TestPackageManager {
     public init() {
     }
     
-    var owner : UIViewController?
-    
-    public func customAlertPop(titleValue: String, mesString: String) {
+    public func customAlertPop(titleValue: String, mesString: String, viewController: UIViewController) {
         let alertController = UIAlertController(title: titleValue, message: mesString, preferredStyle: .alert)
 
         let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
         alertController.addAction(defaultAction)
 
-        owner?.present(alertController, animated: true, completion: nil)
+        viewController.present(alertController, animated: true, completion: nil)
     }
 }
-// dgs
